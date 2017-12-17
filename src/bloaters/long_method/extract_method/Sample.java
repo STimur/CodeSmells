@@ -5,8 +5,10 @@ public class Sample {
 
     void printOwing() {
         printBanner();
+        printDetails();
+    }
 
-        //print details
+    private void printDetails() {
         System.out.println("name: " + name);
         System.out.println("amount: " + getOutstanding());
     }
@@ -16,6 +18,5 @@ public class Sample {
     }
 
     private void printBanner() {
-
     }
 }
