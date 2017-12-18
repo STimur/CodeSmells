@@ -5,9 +5,7 @@ public class PreserveWholeObject {
     private MyPlan plan;
 
     boolean isWithinPlan() {
-        int low = daysTempRange.getLow();
-        int high = daysTempRange.getHigh();
-        return plan.withinRange(low, high);
+        return plan.withinRange(daysTempRange);
     }
 
     private class MyRange {
@@ -23,8 +21,8 @@ public class PreserveWholeObject {
     private class MyPlan {
         final int value = 10;
 
-        public boolean withinRange(int low, int high) {
-            return (low < value && value < high);
+        public boolean withinRange(MyRange range) {
+            return (range.getLow() < value && value < range.getHigh());
         }
     }
 }
