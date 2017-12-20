@@ -1,29 +1,55 @@
 package bloaters.large_class.extract_subclass;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class JobItemShould {
-    @Test
-    public void
-    calculate_total_price() {
-        assertThat(new JobItem(false).getTotalPrice(), is(4));
-        assertThat(new JobItem(true).getTotalPrice(), is(8));
+    private JobItem jobItem;
+
+    @Before
+    public void setUp() throws Exception {
+        jobItem = new JobItem();
     }
 
     @Test
     public void
-    calculate_unit_price() {
-        assertThat(new JobItem(false).getUnitPrice(), is(1));
-        assertThat(new JobItem(true).getUnitPrice(), is(2));
+    calculate_total_price_for_job_item() {
+        assertThat(jobItem.getTotalPrice(), is(4));
     }
 
     @Test
     public void
-    know_employee_name() {
-        assertThat(new JobItem(false).getEmployee(), is("Jim"));
-        assertThat(new JobItem(true).getEmployee(), is("John"));
+    calculate_total_price_for_labor_item() {
+        jobItem = new LaborItem();
+        assertThat(jobItem.getTotalPrice(), is(8));
+    }
+
+    @Test
+    public void
+    calculate_unit_price_for_job_item() {
+        assertThat(jobItem.getUnitPrice(), is(1));
+    }
+
+    @Test
+    public void
+    calculate_unit_price_for_labor_item() {
+        jobItem = new LaborItem();
+        assertThat(jobItem.getUnitPrice(), is(2));
+    }
+
+    @Test
+    public void
+    know_employee_name_for_job_item() {
+        assertThat(jobItem.getEmployee(), is("Jim"));
+    }
+
+    @Test
+    public void
+    know_employee_name_for_labor_item() {
+        jobItem = new LaborItem();
+        assertThat(jobItem.getEmployee(), is("John"));
     }
 }
