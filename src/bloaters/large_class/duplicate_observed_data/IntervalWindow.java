@@ -7,6 +7,9 @@ public class IntervalWindow {
     TextField endField;
     TextField lengthField;
 
+    public IntervalWindow(Interval interval) {
+    }
+
     public void StartField_FocusLost() {
     }
 
@@ -16,9 +19,4 @@ public class IntervalWindow {
     public void LengthField_FocusLost() {
     }
 
-    public void calculateLength() {
-    }
-
-    public void calculateEnd() {
-    }
 }
