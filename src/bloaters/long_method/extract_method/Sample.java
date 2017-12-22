@@ -1,6 +1,6 @@
-package bloaters.long_method;
+package bloaters.long_method.extract_method;
 
-public class ExtractMethod {
+public class Sample {
     private String name;
 
     void printOwing() {

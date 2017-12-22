@@ -1,6 +1,6 @@
-package bloaters.long_method.ancillary_refactorings;
+package bloaters.long_method.ancillary_refactorings.replace_temp_with_query;
 
-public class ReplaceTempWithQuery {
+public class Sample {
     private double quantity;
     private double itemPrice;
 

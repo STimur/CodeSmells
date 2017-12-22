@@ -1,4 +1,4 @@
-package bloaters.long_method;
+package bloaters.long_method.replace_method_with_method_object;
 
 class Order {
     public double primaryBasePrice;

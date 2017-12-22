@@ -1,6 +1,6 @@
-package bloaters.long_method.ancillary_refactorings;
+package bloaters.long_method.ancillary_refactorings.preserve_whole_object;
 
-public class PreserveWholeObject {
+public class Sample {
     private MyRange daysTempRange;
     private MyPlan plan;
 

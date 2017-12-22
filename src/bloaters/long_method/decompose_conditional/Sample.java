@@ -1,8 +1,8 @@
-package bloaters.long_method;
+package bloaters.long_method.decompose_conditional;
 
 import java.util.Date;
 
-public class DecomposeConditional {
+public class Sample {
     private static final Date SUMMER_START = new Date(118, 5, 1);
     private static final Date SUMMER_END = new Date(118, 7, 31);
     private int quantity;
