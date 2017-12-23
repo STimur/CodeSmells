@@ -1,11 +1,10 @@
 package bloaters.primitive_obsession.replace_data_value_with_object;
 
 public class Order {
-    private String customerId;
-    private String customerName;
-    private String customerPhone;
+    int id;
+    Customer customer;
 
-    public String getCustomerSummery() {
-        return customerId + " " + customerName + " " + customerPhone;
+    public String getOrderSummary() {
+        return "Order " + id + " " + customer.getCustomerSummery();
     }
 }
