@@ -5,6 +5,6 @@ public class Order {
     Customer customer;
 
     public String getOrderSummary() {
-        return "Order " + id + " " + customer.getCustomerSummery();
+        return "OrderItem " + id + " " + customer.getCustomerSummery();
     }
 }
