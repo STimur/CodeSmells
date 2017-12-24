@@ -1,4 +1,4 @@
-package bloaters.primitive_obsession.replayce_type_code_with_subclasses;
+package bloaters.primitive_obsession.replace_type_code_with_subclasses;
 
 public class Salesman extends Employee {
     @Override
