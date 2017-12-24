@@ -1,11 +1,9 @@
 package bloaters.primitive_obsession.replace_type_code_with_state;
 
 public class Employee {
-    final int ENGINEER = 0;
-    final int SALESMAN = 1;
-    int type;
+    EmployeeType type;
 
-    public void changeType(int type) {
+    public void changeType(EmployeeType type) {
         this.type = type;
     }
 }
