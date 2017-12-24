@@ -1,11 +1,11 @@
 package bloaters.primitive_obsession.replace_array_with_object;
 
 public class FootballClub {
-    String[] row = new String[3];
+    Performance performance = new Performance();
 
-    public void setSeasonStatistics() {
-        row[0] = "10";
-        row[1] = "15";
-        row[2] = "4";
+    public void setSeasonStatistics(int wins, int losses, int draws) {
+        performance.wins = wins;
+        performance.losses = losses;
+        performance.draws = draws;
     }
 }
