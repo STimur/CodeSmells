@@ -7,17 +7,14 @@ public class Payment {
     private boolean isPartTime;
 
     double disabilityAmount() {
-        if (seniority < 2) {
+        if (isNotEligableForDisability())
             return 0;
-        }
-        if (monthsDisabled > 12) {
-            return 0;
-        }
-        if (isPartTime) {
-            return 0;
-        }
         // compute the disability amount
         //...
         return Math.random() * amount;
+    }
+
+    private boolean isNotEligableForDisability() {
+        return seniority < 2 || monthsDisabled > 12 || isPartTime;
     }
 }
