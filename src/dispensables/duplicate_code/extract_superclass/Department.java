@@ -1,14 +1,10 @@
 package dispensables.duplicate_code.extract_superclass;
 
-public class Department {
-    double getTotalAnnualCost() {
+public class Department extends Party {
+    @Override
+    double getAnnualCost() {
         //...
         return 0;
-    }
-
-    String getName() {
-        //...
-        return null;
     }
 
     int getHeadCount() {

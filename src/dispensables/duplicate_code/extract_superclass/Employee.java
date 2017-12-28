@@ -1,14 +1,10 @@
 package dispensables.duplicate_code.extract_superclass;
 
-public class Employee {
+public class Employee extends Party {
+    @Override
     double getAnnualCost() {
         //...
         return 0;
-    }
-
-    String getName() {
-        //...
-        return null;
     }
 
     int getId() {
