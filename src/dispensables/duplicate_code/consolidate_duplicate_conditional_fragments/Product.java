@@ -5,13 +5,11 @@ public class Product {
     private double price;
 
     void market() {
-        if (isSpecialDeal()) {
+        if (isSpecialDeal())
             total = price * 0.95;
-            send();
-        } else {
+        else
             total = price * 0.98;
-            send();
-        }
+        send();
     }
 
     private void send() {
