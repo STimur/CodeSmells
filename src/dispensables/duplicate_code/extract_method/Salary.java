@@ -4,13 +4,15 @@ public class Salary {
     private double amount;
 
     public double getGross() {
-        double socialTax = amount * 0.75;
-        return amount - socialTax;
+        return amount - getSocialTax();
     }
 
     public double getNet() {
-        double socialTax = amount * 0.75;
         double incomeTax = amount * 0.13;
-        return amount - socialTax - incomeTax;
+        return amount - getSocialTax() - incomeTax;
+    }
+
+    private double getSocialTax() {
+        return amount * 0.75;
     }
 }
