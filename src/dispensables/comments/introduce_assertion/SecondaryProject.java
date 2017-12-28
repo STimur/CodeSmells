@@ -6,7 +6,7 @@ public class SecondaryProject {
     private PrimaryProject primaryProject;
 
     double getExpenseLimit() {
-        // should have either expense limit or a primary project
+        assert expenseLimit != NULL_EXPENSE || primaryProject != null;
         return (expenseLimit != NULL_EXPENSE) ?
                 expenseLimit :
                 primaryProject.getMemberExpenseLimit();
