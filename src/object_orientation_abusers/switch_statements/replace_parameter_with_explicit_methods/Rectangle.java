@@ -4,14 +4,11 @@ public class Rectangle {
     private int height;
     private int width;
 
-    void setValue(String name, int value) {
-        if (name.equals("height")) {
-            height = value;
-            return;
-        }
-        if (name.equals("width")) {
-            width = value;
-            return;
-        }
+    void setHeight(int value) {
+        height = value;
+    }
+
+    void setWidth(int value) {
+        width = value;
     }
 }
