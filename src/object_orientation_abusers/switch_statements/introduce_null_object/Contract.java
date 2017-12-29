@@ -4,22 +4,30 @@ public class Contract {
     private final BillingPlan billingPlan;
 
     public Contract(Customer customer) {
-        if (customer == null) {
-            billingPlan = BillingPlan.basic();
-        } else {
-            billingPlan = customer.getPlan();
-        }
-    }
-}
-
-class Customer {
-    public BillingPlan getPlan() {
-        return null;
+        billingPlan = customer.getPlan();
     }
 }
 
 class BillingPlan {
     public static BillingPlan basic() {
-        return null;
+        return new BillingPlan();
     }
 }
+
+class Customer {
+    private BillingPlan billingPlan;
+
+    public BillingPlan getPlan() {
+        return billingPlan;
+    }
+
+}
+
+class NullCustomer extends Customer {
+    @Override
+    public BillingPlan getPlan() {
+        return BillingPlan.basic();
+    }
+
+}
+
