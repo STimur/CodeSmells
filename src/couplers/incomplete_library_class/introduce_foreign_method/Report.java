@@ -7,8 +7,11 @@ public class Report {
 
     //...
     void sendReport() {
-        Date nextDay = new Date(previousEnd.getYear(),
-                previousEnd.getMonth(), previousEnd.getDate() + 1);
+        Date nextDay = nextDay(previousEnd);
         //...
+    }
+
+    private static Date nextDay(Date date) {
+        return new Date(date.getYear(), date.getMonth(), date.getDate() + 1);
     }
 }
