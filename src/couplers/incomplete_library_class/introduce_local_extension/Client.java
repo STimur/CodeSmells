@@ -4,6 +4,6 @@ import java.util.Date;
 
 public class Client {
     public static void main(String[] args) {
-        System.out.println(new Date().nextDay());
+        System.out.println(new MyDate().nextDay());
     }
 }
